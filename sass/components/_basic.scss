@@ -1,0 +1,57 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+p,
+h1,
+h2,
+h3,
+ul {
+  margin: 0px;
+}
+body {
+  font-family: $primary-text, sans-serif;
+
+  position: relative;
+
+  background: $body-background;
+  line-height: 2;
+}
+img {
+  display: block;
+}
+p {
+  font-weight: 400;
+  color: $text-color;
+}
+button {
+  &:active,
+  &:hover,
+  &:focus {
+    cursor: pointer;
+    transition-property: $transition-property;
+    transition-duration: $transition-duration;
+    transition-timing-function: $transition-timing-function;
+  }
+}
+a {
+  &:hover,
+  &:focus,
+  &:active {
+    color: $hover-color;
+    cursor: pointer;
+  }
+}
+section {
+  padding-top: 94px;
+  padding-bottom: 94px;
+}
+.container {
+  margin-left: auto;
+  margin-right: auto;
+  width: 1200px;
+  padding-right: 15px;
+  padding-left: 15px;
+}
