@@ -1,6 +1,13 @@
-@media screen and (mid-width: $desktop) {
+.nav {
+  color: $headline-color;
+}
+@media screen and (max-width: $mobile) {
+  .nav-pages {
+    display: none;
+  }
+}
+@media screen and (min-width: $desktop) {
   .nav {
-    color: $headline-color;
     display: flex;
     align-items: center;
     justify-content: center;

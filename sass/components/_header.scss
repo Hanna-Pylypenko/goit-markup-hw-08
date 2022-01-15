@@ -1,13 +1,19 @@
-@media screen and (min-width:$desktop) {
-    header {
-        display: flex;
-        flex-direction: space-between;
-        border-bottom: 1px solid #ececec;
-      
-        & ul {
-          display: flex;
-          justify-content: center;
-          align-items: center;
-        }
-      }
+header .container {
+  padding-top: 16px;
+  padding-bottom: 16px;
+  padding-right: 15px;
+  padding-left: 15px;
+}
+@media screen and (min-width: $desktop) {
+  header {
+    display: flex;
+    flex-direction: space-between;
+    border-bottom: 1px solid #ececec;
+
+    & ul {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+  }
 }
