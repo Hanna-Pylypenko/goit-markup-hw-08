@@ -9,7 +9,6 @@
   letter-spacing: 0.03em;
   color: $hover-color;
   text-decoration: none;
-  margin-right: 93px;
 }
 footer .logo {
   display: block;
@@ -20,4 +19,9 @@ footer .logo {
 }
 .logo__variety--white {
   color: $body-background;
+}
+@media screen and(min-width:$desktop) {
+  .logo {
+    margin-right: 93px;
+  }
 }

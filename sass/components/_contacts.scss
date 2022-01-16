@@ -3,6 +3,27 @@
     display: none;
   }
 }
+.footer-contacts:hover {
+  color: $hover-color;
+  transition-property: $transition-property;
+  transition-duration: $transition-duration;
+  transition-timing-function: $transition-timing-function;
+}
+.footer-contacts__item {
+  & a {
+    color: rgba(255, 255, 255, 0.6);
+    text-decoration: none;
+    font-family: inherit;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    letter-spacing: 0.03em;
+    line-height: 1, 71;
+  }
+  &:not(:last-child) {
+    margin-bottom: 9px;
+  }
+}
 @media (min-width: $desktop) {
   .header-contacts {
     margin-left: auto;
@@ -49,25 +70,5 @@
   }
   .header-contacts__item + .header-contacts__item {
     margin-left: 50px;
-  }
-  .footer-contacts__item {
-    & a {
-      color: rgba(255, 255, 255, 0.6);
-      text-decoration: none;
-      font-family: inherit;
-      font-style: normal;
-      font-weight: 400;
-      font-size: 14px;
-      letter-spacing: 0.03em;
-    }
-    &:not(:last-child) {
-      margin-bottom: 9px;
-    }
-  }
-  .footer-contacts:hover {
-    color: $hover-color;
-    transition-property: $transition-property;
-    transition-duration: $transition-duration;
-    transition-timing-function: $transition-timing-function;
   }
 }
