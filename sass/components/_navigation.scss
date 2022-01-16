@@ -1,12 +1,33 @@
 .nav {
-  position: relative;
   color: $headline-color;
 }
-@media screen and (max-width: $mobile) {
-  .nav-pages {
-    display: none;
+.nav-pages {
+  margin-bottom: 302px;
+  & a {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    min-height: 76px;
+    color: $headline-color;
+    text-decoration: none;
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 40px;
+    line-height: 1.17;
+    letter-spacing: 0.02em;
+
+    transition-property: color;
+    transition-duration: $transition-duration;
+    transition-timing-function: $transition-timing-function;
+  }
+  & a:hover,
+  & a:focus,
+  & a:active {
+    color: $hover-color;
   }
 }
+
 @media screen and (min-width: $desktop) {
   .nav {
     display: flex;

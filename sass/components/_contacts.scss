@@ -1,8 +1,3 @@
-@media (max-width: $mobile) {
-  .header-contacts {
-    display: none;
-  }
-}
 .footer-contacts:hover {
   color: $hover-color;
   transition-property: $transition-property;
@@ -22,6 +17,44 @@
   }
   &:not(:last-child) {
     margin-bottom: 9px;
+  }
+}
+.header-contacts {
+  &__email a {
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 1.16;
+    letter-spacing: 0.02em;
+    color: $text-color;
+    text-decoration: none;
+    margin-bottom: 64px;
+  }
+
+  &__tel a {
+    font-family: inherit;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 34px;
+    line-height: 1.17;
+    letter-spacing: 0.02em;
+    color: $hover-color;
+    text-decoration: none;
+    margin-bottom: 32px;
+  }
+}
+.header-contacts {
+  &__tel {
+    margin-bottom: 32px;
+  }
+  &__email {
+    margin-bottom: 64px;
+  }
+}
+@media (min-width: 0) and (max-width: 479px) {
+  .header-contacts svg {
+    display: none;
   }
 }
 @media (min-width: $desktop) {
