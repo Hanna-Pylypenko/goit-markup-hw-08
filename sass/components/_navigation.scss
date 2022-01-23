@@ -1,8 +1,10 @@
 .nav {
+  height: 100%;
+  display: flex;
+  align-items: center;
   color: $headline-color;
 }
 .nav-pages {
-  margin-bottom: 302px;
   & a {
     display: flex;
     justify-content: flex-start;
@@ -28,11 +30,10 @@
   }
 }
 
-@media screen and (min-width: $desktop) {
+@media screen and (min-width: $tablet) {
   .nav {
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    justify-content: space-between;
+    margin: 0;
 
     & li a {
       font-weight: 500;
@@ -44,11 +45,15 @@
   }
   .nav-pages {
     display: flex;
+    margin-bottom: 0;
+    min-height: 100%;
 
-    &__item:not(:last-child) {
+    &__item {
       margin-right: 50px;
     }
-
+    &__item:last-child {
+      margin-right: 84px;
+    }
     & a {
       display: flex;
       justify-content: center;
@@ -90,6 +95,17 @@
       transition-property: $transition-property;
       transition-duration: $transition-duration;
       transition-timing-function: $transition-timing-function;
+    }
+  }
+}
+@media screen and (min-width: $desktop) {
+  .nav {
+    justify-content: flex-start;
+  }
+  .nav-pages {
+    margin-right: 305px;
+    &__item:last-child {
+      margin-right: 0;
     }
   }
 }

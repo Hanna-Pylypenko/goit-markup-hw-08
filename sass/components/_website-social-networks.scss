@@ -51,9 +51,14 @@
     transition-timing-function: $transition-timing-function;
   }
 }
+@media (min-width: $tablet) {
+  .join {
+    width: 206px;
+  }
+}
 @media (min-width: $desktop) {
   .join {
-    margin-right: 93px;
+    //margin-right: 93px;
     margin-bottom: 0;
 
     &__title {

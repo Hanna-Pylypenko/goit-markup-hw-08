@@ -1,16 +1,8 @@
-.header-menu {
-  display: none;
-  position: fixed;
-  width: 100%;
-  left: 0;
-  top: 0;
-  padding-top: 48px;
-  padding-bottom: 48px;
-  padding-left: 40px;
-  padding-right: 40px;
-}
 .header-menu.is-open {
-  display: block;
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
 
   background-color: $body-background;
 }
@@ -66,5 +58,33 @@
     color: $hover-color;
     text-decoration: none;
     height: 100%;
+  }
+}
+@media (max-width: 767px) {
+  .header-menu {
+    display: none;
+    position: fixed;
+    width: 100%;
+    left: 0;
+    top: 0;
+    padding-top: 48px;
+    padding-bottom: 48px;
+    padding-left: 40px;
+    padding-right: 40px;
+    background-color: $body-background;
+    z-index: 2;
+  }
+}
+@media screen and (min-width: $tablet) {
+  .header-menu {
+    display: flex;
+    position: relative;
+  }
+
+  .header-menu-socnetworks {
+    display: none;
+  }
+  .header-menu__button {
+    display: none;
   }
 }

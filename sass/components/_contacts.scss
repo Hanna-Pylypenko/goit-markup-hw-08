@@ -19,6 +19,19 @@
     margin-bottom: 9px;
   }
 }
+@media (min-width: $desktop) {
+  .footer-contacts {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: left;
+  }
+  .footer-contacts__item {
+    display: flex;
+    justify-content: flex-start;
+    align-items: left;
+  }
+}
 .header-contacts {
   &__email a {
     font-family: Roboto;
@@ -45,6 +58,7 @@
   }
 }
 .header-contacts {
+  margin-top: auto;
   &__tel {
     margin-bottom: 32px;
   }
@@ -52,29 +66,67 @@
     margin-bottom: 64px;
   }
 }
-@media (min-width: 0) and (max-width: 479px) {
+@media (max-width: 767px) {
   .header-contacts svg {
     display: none;
   }
 }
-@media (min-width: $desktop) {
+@media (min-width: $tablet) {
   .header-contacts {
-    margin-left: auto;
-  }
-  .header-contacts__item {
-    fill: $text-color;
     display: flex;
+    flex-direction: column-reverse;
     justify-content: center;
-    align-items: center;
+    margin-top: 0;
+
+    margin-left: auto;
+
+    &__email a {
+      font-family: Roboto;
+      font-style: normal;
+      font-weight: 500;
+      font-size: 12px;
+      line-height: 1.16;
+      letter-spacing: 0.02em;
+      color: $text-color;
+    }
+    &__tel a {
+      font-family: Roboto;
+      font-style: normal;
+      font-weight: 500;
+      font-size: 12px;
+      line-height: 1.16;
+      letter-spacing: 0.02em;
+      color: $text-color;
+    }
+    &__tel {
+      margin-bottom: 0;
+    }
+    &__email {
+      margin-bottom: 10px;
+    }
+  }
+  .header-contacts {
+    &__email,
+    &__tel svg {
+      fill: $text-color;
+      &:hover,
+      &:focus {
+        fill: $hover-color;
+        transition-property: fill;
+        transition-duration: $transition-duration;
+        transition-timing-function: $transition-timing-function;
+      }
+    }
+    &__email:hover &__email svg {
+      fill: $hover-color;
+    }
+  }
+  .header-contacts svg {
+    fill: $text-color;
+    margin-right: 8px;
     transition-property: fill;
     transition-duration: $transition-duration;
     transition-timing-function: $transition-timing-function;
-  }
-
-  .header-contacts__item a {
-    display: flex;
-    justify-content: center;
-    align-items: center;
     &:hover,
     &:focus {
       fill: $hover-color;
@@ -83,25 +135,69 @@
       transition-timing-function: $transition-timing-function;
     }
   }
-  .header-contacts__item svg {
-    margin-right: 10px;
+}
+@media (min-width: $desktop) {
+  .header-contacts {
+    flex-direction: row-reverse;
+    justify-content: flex-end;
+    &__email {
+      margin-right: 30px;
+      margin-bottom: 0;
+    }
+    &__tel {
+      margin-bottom: 0;
+    }
   }
 
   .header-contacts a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    &:hover,
+    &:focus {
+      color: $hover-color;
+      transition-property: $transition-property;
+      transition-duration: $transition-duration;
+      transition-timing-function: $transition-timing-function;
+    }
+  }
+
+  .header-contacts svg {
+    fill: $text-color;
+    margin-right: 10px;
+    transition-property: $transition-property;
+    transition-duration: $transition-duration;
+    transition-timing-function: $transition-timing-function;
+    &:hover,
+    &:focus {
+      fill: $hover-color;
+      transition-property: $transition-property;
+      transition-duration: $transition-duration;
+      transition-timing-function: $transition-timing-function;
+    }
+  }
+
+  .header-contacts li a {
     font-weight: 500;
     font-size: 14px;
     line-height: 1.15;
     letter-spacing: 0.02em;
     color: $text-color;
     text-decoration: none;
-    transition: color $transition-duration $transition-timing-function;
+    transition: $transition-property $transition-duration
+      $transition-timing-function;
+    margin-bottom: 0;
 
     &:hover {
+      fill: $hover-color;
       color: $hover-color;
-      transition: color $transition-duration $transition-timing-function;
+      transition: $transition-property $transition-duration
+        $transition-timing-function;
     }
-  }
-  .header-contacts__item + .header-contacts__item {
-    margin-left: 50px;
+    &:hover .header-contacts__email svg {
+      fill: $hover-color;
+      transition: $transition-property $transition-duration
+        $transition-timing-function;
+    }
   }
 }

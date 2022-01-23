@@ -47,7 +47,7 @@
     color: $body-background;
   }
 }
-@media (max-width: $tablet) {
+@media (max-width: $desktop) {
   .things-we-do {
     display: none;
   }

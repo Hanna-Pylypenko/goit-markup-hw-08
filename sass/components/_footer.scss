@@ -1,11 +1,10 @@
 footer {
   background: $section-background;
   display: flex;
-  flex-direction: column;
 
   & .container {
     display: flex;
-    flex-direction: column;
+    flex-wrap: wrap;
 
     padding-top: 60px;
     padding-bottom: 60px;
@@ -18,12 +17,14 @@ footer {
   display: flex;
   flex-direction: column;
 }
-@media (max-width: $mobile) {
+@media (max-width: 767px) {
   footer {
+    flex-direction: column;
     justify-content: center;
     align-items: center;
   }
-  footer.container {
+  footer .container {
+    flex-direction: column;
     justify-content: center;
     align-items: center;
   }
@@ -33,12 +34,31 @@ footer {
     margin-bottom: 60px;
   }
 }
+@media screen and (min-width: $tablet) and (max-width: 1199px) {
+  footer .container {
+    width: 768px;
+    flex-direction: row;
 
+    justify-content: space-around;
+  }
+
+  .logo-and-contacts {
+    width: 232px;
+
+    margin-bottom: 60px;
+  }
+}
+
+@media screen and (max-width: 1199px) {
+  .logo-and-contacts {
+    align-items: center;
+  }
+}
 @media (min-width: $desktop) {
   footer {
-    display: flex;
     flex-direction: row;
-    justify-content: flex-start;
+    justify-content: space-between;
+    align-items: center;
     margin-left: auto;
     margin-right: auto;
 
