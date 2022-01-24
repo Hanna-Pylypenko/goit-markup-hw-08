@@ -1,5 +1,5 @@
 .portfolio-menu {
-  padding-top: 25px;
+  padding-top: 60px;
   padding-bottom: 60px;
   margin: 0px;
   & h2 {
@@ -25,6 +25,9 @@
 .portfolio-cards__item {
   text-decoration: none;
   box-shadow: none;
+  border-bottom: 1px solid #eeeeee;
+  border-right: 1px solid #eeeeee;
+  border-left: 1px solid #eeeeee;
 
   margin-bottom: 30px;
   transition-property: box-shadow;
@@ -57,14 +60,12 @@
   }
 }
 .portfolio-cards__title {
-  height: 143px;
+  //height: 143px;
   padding-top: 20px;
   padding-bottom: 20px;
   padding-right: 24px;
   padding-left: 24px;
-  border-bottom: 1px solid #eeeeee;
-  border-right: 1px solid #eeeeee;
-  border-left: 1px solid #eeeeee;
+
   & p {
     font-family: inherit;
     font-style: normal;
@@ -80,6 +81,8 @@
   top: 0;
   left: 0;
   overflow: hidden;
+  margin-left: -1px;
+  margin-right: -1px;
 }
 .portfolio-cards__thumb-description {
   position: absolute;
@@ -128,6 +131,9 @@
     &:not(:nth-child(2n)) {
       margin-right: 30px;
     }
+  }
+  .portfolio-cards__thumb-text {
+    height: 196px;
   }
 }
 @media screen and (min-width: $desktop) {

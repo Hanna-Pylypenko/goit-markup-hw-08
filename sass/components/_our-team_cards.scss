@@ -12,8 +12,8 @@
 
   &__title {
     text-align: center;
-    font-size: 36px;
-    margin-bottom: 50px;
+    font-size: 28px;
+    margin-bottom: 30px;
     line-height: 1.17;
     letter-spacing: 0.03em;
   }
@@ -33,6 +33,7 @@
     letter-spacing: 0.03em;
   }
 }
+
 .team-members {
   display: flex;
   flex-direction: column;
@@ -41,6 +42,7 @@
 .team-members__card {
   width: 100%;
 }
+
 .team-contacts {
   display: flex;
   flex-direction: row;
@@ -96,7 +98,7 @@
 .team-members h3 {
   margin-bottom: 10px;
 }
-.team-members__card {
+.team-members__card:not(:last-child) {
   margin-bottom: 30px;
 }
 @media (min-width: $tablet) {
@@ -125,6 +127,10 @@
     padding-top: 94px;
     display: flex;
     justify-content: center;
+  }
+  .our-team__title {
+    font-size: 36px;
+    margin-bottom: 50px;
   }
   .team-members {
     flex-direction: row;

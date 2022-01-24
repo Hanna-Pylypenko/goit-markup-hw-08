@@ -47,9 +47,18 @@ a:hover, a:focus, a:active {
   cursor: pointer;
 }
 
-section {
-  padding-top: 60px;
-  padding-bottom: 60px;
+@media (max-width: 1199px) {
+  section {
+    padding-top: 60px;
+    padding-bottom: 60px;
+  }
+}
+
+@media (min-width: 1200px) {
+  section {
+    padding-top: 94px;
+    padding-bottom: 94px;
+  }
 }
 
 .container {
@@ -95,6 +104,7 @@ header {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  border-bottom: 1px solid #ececec;
 }
 
 header.container {
@@ -1235,9 +1245,6 @@ footer .logo {
   .values-list__item:not(:last-child) {
     margin-bottom: 30px;
   }
-  .values-list__item p {
-    text-align: center;
-  }
 }
 
 @media (min-width: 480px) and (max-width: 767px) {
@@ -1296,6 +1303,8 @@ footer .logo {
 @media (min-width: 1200px) {
   .our-values.container {
     width: 1200px;
+    padding-top: 94px;
+    padding-bottom: 94px;
   }
   .values-list {
     -webkit-box-orient: horizontal;
@@ -1372,10 +1381,16 @@ footer .logo {
       -ms-flex-pack: center;
           justify-content: center;
   text-align: center;
-  font-size: 36px;
+  font-size: 28px;
   margin-bottom: 50px;
   line-height: 1.17;
   letter-spacing: 0.03em;
+}
+
+@media (min-width: 1200px) {
+  .things-we-do__title {
+    font-size: 36px;
+  }
 }
 
 .things-we-do__overlay {
@@ -1431,8 +1446,8 @@ footer .logo {
 
 .our-team__title {
   text-align: center;
-  font-size: 36px;
-  margin-bottom: 50px;
+  font-size: 28px;
+  margin-bottom: 30px;
   line-height: 1.17;
   letter-spacing: 0.03em;
 }
@@ -1556,7 +1571,7 @@ footer .logo {
   margin-bottom: 10px;
 }
 
-.team-members__card {
+.team-members__card:not(:last-child) {
   margin-bottom: 30px;
 }
 
@@ -1597,6 +1612,10 @@ footer .logo {
         -ms-flex-pack: center;
             justify-content: center;
   }
+  .our-team__title {
+    font-size: 36px;
+    margin-bottom: 50px;
+  }
   .team-members {
     -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;
@@ -1630,12 +1649,12 @@ footer .logo {
   font-family: inherit;
   font-style: normal;
   font-weight: 700;
-  font-size: 36px;
+  font-size: 28px;
   line-height: 1.17;
   text-align: center;
   letter-spacing: 0.03em;
   color: #212121;
-  margin-bottom: 50px;
+  margin-bottom: 30px;
 }
 
 .loyal-clients-list {
@@ -1804,8 +1823,6 @@ footer .container {
   display: flex;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
-  padding-top: 60px;
-  padding-bottom: 60px;
 }
 
 footer li {
@@ -1875,6 +1892,10 @@ footer li {
 }
 
 @media screen and (max-width: 1199px) {
+  footer {
+    padding-top: 60px;
+    padding-bottom: 60px;
+  }
   .logo-and-contacts {
     -webkit-box-align: center;
         -ms-flex-align: center;
@@ -1896,8 +1917,8 @@ footer li {
             align-items: center;
     margin-left: auto;
     margin-right: auto;
-    padding-top: 60px;
-    padding-bottom: 60px;
+    padding-top: 94px;
+    padding-bottom: 94px;
     padding-right: 15px;
     padding-left: 15px;
   }
@@ -2183,7 +2204,6 @@ address {
 
 .filter-menu {
   text-align: center;
-  margin-bottom: 40px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -2191,6 +2211,24 @@ address {
       flex-wrap: wrap;
   margin-left: auto;
   margin-right: auto;
+}
+
+@media (max-width: 767px) {
+  .filter-menu {
+    padding-bottom: 40px;
+  }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1199px) {
+  .filter-menu {
+    padding-bottom: 30px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .filter-menu {
+    padding-bottom: 50px;
+  }
 }
 
 .filter-menu__item {
@@ -2247,7 +2285,7 @@ address {
 }
 
 .portfolio-menu {
-  padding-top: 25px;
+  padding-top: 60px;
   padding-bottom: 60px;
   margin: 0px;
 }
@@ -2278,6 +2316,9 @@ address {
   text-decoration: none;
   -webkit-box-shadow: none;
           box-shadow: none;
+  border-bottom: 1px solid #eeeeee;
+  border-right: 1px solid #eeeeee;
+  border-left: 1px solid #eeeeee;
   margin-bottom: 30px;
   -webkit-transition-property: -webkit-box-shadow;
   transition-property: -webkit-box-shadow;
@@ -2329,14 +2370,10 @@ address {
 }
 
 .portfolio-cards__title {
-  height: 143px;
   padding-top: 20px;
   padding-bottom: 20px;
   padding-right: 24px;
   padding-left: 24px;
-  border-bottom: 1px solid #eeeeee;
-  border-right: 1px solid #eeeeee;
-  border-left: 1px solid #eeeeee;
 }
 
 .portfolio-cards__title p {
@@ -2353,6 +2390,8 @@ address {
   top: 0;
   left: 0;
   overflow: hidden;
+  margin-left: -1px;
+  margin-right: -1px;
 }
 
 .portfolio-cards__thumb-description {
@@ -2415,6 +2454,9 @@ address {
   }
   .portfolio-cards__item:not(:nth-child(2n)) {
     margin-right: 30px;
+  }
+  .portfolio-cards__thumb-text {
+    height: 196px;
   }
 }
 

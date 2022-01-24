@@ -5,9 +5,6 @@ footer {
   & .container {
     display: flex;
     flex-wrap: wrap;
-
-    padding-top: 60px;
-    padding-bottom: 60px;
   }
   & li {
     line-height: 1.71;
@@ -50,6 +47,10 @@ footer {
 }
 
 @media screen and (max-width: 1199px) {
+  footer {
+    padding-top: 60px;
+    padding-bottom: 60px;
+  }
   .logo-and-contacts {
     align-items: center;
   }
@@ -62,8 +63,8 @@ footer {
     margin-left: auto;
     margin-right: auto;
 
-    padding-top: 60px;
-    padding-bottom: 60px;
+    padding-top: 94px;
+    padding-bottom: 94px;
     padding-right: 15px;
     padding-left: 15px;
 

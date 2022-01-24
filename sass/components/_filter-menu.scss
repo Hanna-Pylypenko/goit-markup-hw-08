@@ -1,10 +1,25 @@
 .filter-menu {
   text-align: center;
-  margin-bottom: 40px;
+
   display: flex;
   flex-wrap: wrap;
   margin-left: auto;
   margin-right: auto;
+}
+@media (max-width: 767px) {
+  .filter-menu {
+    padding-bottom: 40px;
+  }
+}
+@media screen and (min-width: 768px) and (max-width: 1199px) {
+  .filter-menu {
+    padding-bottom: 30px;
+  }
+}
+@media (min-width: $desktop) {
+  .filter-menu {
+    padding-bottom: 50px;
+  }
 }
 .filter-menu__item {
   background-color: $light-section;

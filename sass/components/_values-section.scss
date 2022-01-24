@@ -57,9 +57,6 @@
     &:not(:last-child) {
       margin-bottom: 30px;
     }
-    & p {
-      text-align: center;
-    }
   }
 }
 
@@ -105,6 +102,8 @@
   .our-values {
     &.container {
       width: 1200px;
+      padding-top: 94px;
+      padding-bottom: 94px;
     }
   }
   .values-list {

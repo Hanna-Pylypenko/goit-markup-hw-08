@@ -16,10 +16,15 @@
     display: flex;
     justify-content: center;
     text-align: center;
-    font-size: 36px;
+    font-size: 28px;
     margin-bottom: 50px;
     line-height: 1.17;
     letter-spacing: 0.03em;
+  }
+}
+@media (min-width: $desktop) {
+  .things-we-do__title {
+    font-size: 36px;
   }
 }
 .things-we-do {
