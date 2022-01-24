@@ -5,31 +5,8 @@
 }
 .values-list {
   display: flex;
-  flex-direction: column;
-  justify-content: center;
-  &__item {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-  }
   &__item p {
-    text-align: center;
-  }
-}
-@media (max-width: 479px) {
-  .values-list {
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-  }
-  .values-list__item {
-    text-align: center;
-    min-width: 320px;
-    max-width: 450px;
-    &:not(:last-child) {
-      margin-bottom: 30px;
-    }
+    text-align: left;
   }
 }
 .values-list__item {
@@ -61,7 +38,32 @@
   }
 }
 
-@media (min-width: $mobile) {
+@media (max-width: 767px) {
+  .values-list {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .values-list__item {
+    text-align: center;
+    min-width: 320px;
+    max-width: 450px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+
+    &:not(:last-child) {
+      margin-bottom: 30px;
+    }
+    & p {
+      text-align: center;
+    }
+  }
+}
+
+@media (min-width: $mobile) and (max-width: 767px) {
   .our-values {
     &.container {
       display: flex;
@@ -70,7 +72,7 @@
     }
   }
 }
-@media (min-width: $tablet) {
+@media screen and (min-width: $tablet) and (max-width: 1199px) {
   .our-values.container {
     width: 768px;
   }
@@ -82,6 +84,9 @@
   }
   .values-list__item {
     width: 354px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
 
     margin-bottom: 30px;
     &:nth-last-child(-n + 2) {
@@ -89,6 +94,10 @@
     }
     &:not(:nth-child(2n)) {
       margin-right: 30px;
+    }
+
+    &-title p {
+      text-align: left;
     }
   }
 }
