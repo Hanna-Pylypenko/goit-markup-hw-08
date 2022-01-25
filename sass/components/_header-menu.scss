@@ -15,9 +15,10 @@
   margin-right: 15px;
 }
 .header-menu__button {
-  position: absolute;
-  top: 10px;
-  right: 10px;
+  //position: absolute;
+  //top: 10px;
+  //right: 10px;
+  margin-left: auto;
   background-color: $body-background;
   border: none;
   &:hover,
